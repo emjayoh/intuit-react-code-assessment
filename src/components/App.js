@@ -1,11 +1,11 @@
-import React from "react";
-import PostsAppContainer from "./PostsAppContainer";
-import "./styles.css";
+import React from 'react';
+import PostsAppContainer from '../containers/PostsAppContainer';
+import '../styles.css';
 
-export default function App() {
-  return (
-    <div className="App">
-      <PostsAppContainer></PostsAppContainer>
-    </div>
-  );
-}
+const App = () => (
+  <div className="App">
+    <PostsAppContainer />
+  </div>
+);
+
+export default App;

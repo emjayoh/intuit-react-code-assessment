@@ -1,15 +1,21 @@
 import React from 'react';
+import { List, ListItem, Text } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 
 const PostsTab = ({ postsData }) => (
-  <ul>
+  <List>
     {postsData.map((post) => (
-      <li key={post.id}>
-        <p>{post.title}</p>
-        <p>{post.body}</p>
-      </li>
+      <ListItem key={post.id} style={{ padding: '10px', marginBottom: '10px' }}>
+        <Text fontWeight="bold" fontSize="md" style={{ marginBottom: '5px' }}>
+          {post.title}
+        </Text>
+        <Text fontSize="sm" style={{ paddingBottom: '10x' }}>
+          {post.body}
+        </Text>
+        {/* <Divider /> */}
+      </ListItem>
     ))}
-  </ul>
+  </List>
 );
 
 PostsTab.propTypes = {

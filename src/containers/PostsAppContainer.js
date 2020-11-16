@@ -22,13 +22,13 @@ const PostsAppContainer = () => {
    * Fetch/store userId from session and store in state, returns 1 if not set
    */
   const fetchUserId = () => {
-    if (!localStorage.hasOwnProperty('userId')) {
-      // alert(
-      //   'User ID is missing, please set in browser console session and refresh -- or continue with default set to 1'
-      // );
+    if (!sessionStorage.hasOwnProperty('userId')) {
+      alert(
+        'User ID is missing, please set in browser console session and refresh -- or continue with default set to 1'
+      );
       console.warn('UserId missing from session, using default 1');
     } else {
-      setUserId(localStorage.getItem('userId'));
+      setUserId(sessionStorage.getItem('userId'));
     }
   };
 

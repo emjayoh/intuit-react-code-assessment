@@ -36,7 +36,6 @@ const PostsAppContainer = () => {
    * Helper to fetch/store any type of data given setter and API URI
    */
   const fetchAppData = async ({ setDataCallback, setDataApiUri }) => {
-    console.log(setDataApiUri);
     const resData = await fetch(
       `https://jsonplaceholder.typicode.com/${setDataApiUri}`
     );
@@ -63,7 +62,7 @@ const PostsAppContainer = () => {
    * Draw things
    */
   return (
-    <div className="outerContainer">
+    <div>
       <Container>
         <Tabs isFitted variant="enclosed-colored">
           <TabList>

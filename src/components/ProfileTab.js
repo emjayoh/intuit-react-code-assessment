@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from '@chakra-ui/react';
+import { LinkIcon } from '@chakra-ui/icons';
 import styled from 'styled-components';
 
 const ProfileTable = styled.table`
@@ -35,7 +36,8 @@ const ProfileTab = ({ profileData }) => {
           </td>
           <td>
             <Link color="teal.500" href={`mailto: ${profileEntry.email}`}>
-              {profileEntry.email}
+              <LinkIcon />
+              &nbsp;{profileEntry.email}
             </Link>
           </td>
         </tr>
@@ -63,57 +65,13 @@ const ProfileTab = ({ profileData }) => {
           </td>
           <td>
             <Link color="teal.500" href={profileEntry.website} target="_blank">
-              {profileEntry.website}
+              <LinkIcon />
+              &nbsp;{profileEntry.website}
             </Link>
           </td>
         </tr>
       </tbody>
     </ProfileTable>
-
-    // <ul key={profileEntry.id}>
-    //   <li>
-    //     <p>
-    //       <label>name: </label>
-    //       <span>{profileEntry.name}</span>
-    //     </p>
-    //   </li>
-    //   <li>
-    //     <p>
-    //       <label>username: </label>
-    //       <span>{profileEntry.username}</span>
-    //     </p>
-    //   </li>
-    //   <li>
-    //     <p>
-    //       <label>email: </label>
-    //       <span>{profileEntry.email}</span>
-    //     </p>
-    //   </li>
-    //   <li>
-    //     <p>
-    //       <label>address: </label>
-    //       <span>{`${profileEntry.address.street} ${profileEntry.address.suite}`}</span>
-    //     </p>
-    //   </li>
-    //   <li>
-    //     <p>
-    //       <label>city: </label>
-    //       <span>{profileEntry.address.city}</span>
-    //     </p>
-    //   </li>
-    //   <li>
-    //     <p>
-    //       <label>phone: </label>
-    //       <span>{profileEntry.phone}</span>
-    //     </p>
-    //   </li>
-    //   <li>
-    //     <p>
-    //       <label>website: </label>
-    //       <span>{profileEntry.website}</span>
-    //     </p>
-    //   </li>
-    // </ul>
   ));
 };
 

@@ -1,11 +1,8 @@
 {
-  "name": "react",
+  "name": "intuit-mint-frontend-interview",
   "version": "1.0.0",
-  "description": "React example starter project",
-  "keywords": [
-    "react",
-    "starter"
-  ],
+  "description": "React app to show user profile and posts",
+  "keywords": [],
   "main": "src/index.js",
   "dependencies": {
     "@chakra-ui/icons": "1.0.0",
